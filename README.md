@@ -1,6 +1,6 @@
 # Exploratory Data Analysis (EDA) & NumPy Practice Repository
 
-Welcome to the **Exploratory Data Analysis (EDA) & NumPy Practice Repository**. This repository contains a structured, 15-part step-by-step modular code collection covering fundamental to intermediate operations in Python for data science, vector math, array manipulation, and statistical analysis.
+Welcome to the **Exploratory Data Analysis (EDA) & NumPy Practice Repository**. This repository contains a structured, 17-part step-by-step modular code collection covering fundamental to intermediate operations in Python for data science, vector math, array manipulation, and statistical analysis.
 
 ---
 
@@ -15,7 +15,7 @@ Welcome to the **Exploratory Data Analysis (EDA) & NumPy Practice Repository**. 
   - [Module 3: Arithmetic & Vectorized Operations](#module-3-arithmetic--vectorized-operations)
   - [Module 4: Aggregations & Statistical Summaries](#module-4-aggregations--statistical-summaries)
   - [Module 5: Slicing, Indexing, Searching & Sorting](#module-5-slicing-indexing-searching--sorting)
-  - [Module 6: Comprehensive Practice Tasks](#module-6-comprehensive-practice-tasks)
+  - [Module 6: Comprehensive Practice Tasks & Advanced Operations](#module-6-comprehensive-practice-tasks--advanced-operations)
 - [Key NumPy Concepts Quick Reference](#key-numpy-concepts-quick-reference)
 - [How to Run the Scripts](#how-to-run-the-scripts)
 
@@ -47,6 +47,8 @@ EDA_PRATICE/
 ├── 13_conditional_where.py                 # Conditional searching & value substitution
 ├── 14_sorting_2d.py                        # 2D matrix sorting along columns and rows
 ├── 15_numpy_matrix_practice_task.py        # Comprehensive 4x4 matrix operations practice task
+├── 16_numpy_rounding_functions.py         # Floating-point rounding (np.round, np.floor, np.ceil)
+├── 17_advanced_2d_sorting_and_reversal.py # Descending 2D row sorting & matrix reversals
 └── README.md                               # Detailed repository documentation
 ```
 
@@ -78,8 +80,10 @@ EDA_PRATICE/
 - [`13_conditional_where.py`](file:///d:/EDA_PRATICE/13_conditional_where.py): Conditional searching & value substitution (`np.where`).
 - [`14_sorting_2d.py`](file:///d:/EDA_PRATICE/14_sorting_2d.py): 2D matrix sorting along columns and rows.
 
-### Module 6: Comprehensive Practice Tasks
-- [`15_numpy_matrix_practice_task.py`](file:///d:/EDA_PRATICE/15_numpy_matrix_practice_task.py): Comprehensive 4x4 matrix operations practice combining attribute inspection, indexing, slicing, aggregations, argmax/argmin index positioning, and 2D row-wise sorting.
+### Module 6: Comprehensive Practice Tasks & Advanced Operations
+- [`15_numpy_matrix_practice_task.py`](file:///d:/EDA_PRATICE/15_numpy_matrix_practice_task.py): Comprehensive 4x4 matrix operations practice task.
+- [`16_numpy_rounding_functions.py`](file:///d:/EDA_PRATICE/16_numpy_rounding_functions.py): Floating-point rounding routines (`np.round`, `np.floor`, `np.ceil`).
+- [`17_advanced_2d_sorting_and_reversal.py`](file:///d:/EDA_PRATICE/17_advanced_2d_sorting_and_reversal.py): Advanced 2D row-wise descending sorting (`np.sort(arr)[:, ::-1]`) and matrix reversals.
 
 ---
 
@@ -87,5 +91,6 @@ EDA_PRATICE/
 
 Execute any script individually from the terminal:
 ```bash
-python 15_numpy_matrix_practice_task.py
+python 16_numpy_rounding_functions.py
+python 17_advanced_2d_sorting_and_reversal.py
 ```
