@@ -1,23 +1,18 @@
-# Exploratory Data Analysis (EDA) & NumPy Practice Repository
+# Exploratory Data Analysis (EDA) & Python Data Science Practice Repository
 
-Welcome to the **Exploratory Data Analysis (EDA) & NumPy Practice Repository**. This repository contains a structured, 17-part step-by-step modular code collection covering fundamental to intermediate operations in Python for data science, vector math, array manipulation, and statistical analysis.
+Welcome to the **Exploratory Data Analysis (EDA) & Python Data Science Practice Repository**. This repository contains a structured, modular collection of practice programs, real-world data analysis tasks, and Jupyter Notebooks covering **NumPy**, **Pandas**, and **Matplotlib**.
 
 ---
 
 ## 📌 Table of Contents
 
 - [Overview & Objectives](#overview--objectives)
-- [Python Data Science Ecosystem](#python-data-science-ecosystem)
-- [Module Architecture & Program Index](#module-architecture--program-index)
-- [Detailed Module Breakdown](#detailed-module-breakdown)
-  - [Module 1: EDA Foundations & Array Creation](#module-1-eda-foundations--array-creation)
-  - [Module 2: Array Generation & Structural Transformations](#module-2-array-generation--structural-transformations)
-  - [Module 3: Arithmetic & Vectorized Operations](#module-3-arithmetic--vectorized-operations)
-  - [Module 4: Aggregations & Statistical Summaries](#module-4-aggregations--statistical-summaries)
-  - [Module 5: Slicing, Indexing, Searching & Sorting](#module-5-slicing-indexing-searching--sorting)
-  - [Module 6: Comprehensive Practice Tasks & Advanced Operations](#module-6-comprehensive-practice-tasks--advanced-operations)
-- [Key NumPy Concepts Quick Reference](#key-numpy-concepts-quick-reference)
-- [How to Run the Scripts](#how-to-run-the-scripts)
+- [Repository Directory Structure](#repository-directory-structure)
+- [Module Breakdown](#module-breakdown)
+  - [01. NumPy Core Practice](#01-numpy-core-practice)
+  - [02. Pandas Basics](#02-pandas-basics)
+  - [03. Data Analysis Tasks & Projects](#03-data-analysis-tasks--projects)
+- [How to Run the Code](#how-to-run-the-code)
 
 ---
 
@@ -27,70 +22,98 @@ Exploratory Data Analysis (EDA) is the foundational phase of data science where 
 
 ---
 
-## 📂 Module Architecture & Program Index
+## 📂 Repository Directory Structure
 
 ```
 EDA_PRATICE/
 │
-├── 01_eda_intro.py                         # Detailed EDA lifecycle & toolset intro
-├── 02_array_types_and_dimensions.py        # 1D, 2D, 3D arrays & inspection attributes
-├── 03_special_matrices.py                  # Zeros, Ones, Full, Identity & Eye matrices
-├── 04_reshape_and_flatten.py               # Sequence generation, reshaping & flattening
-├── 05_arithmetic_operators.py              # Element-wise operators (+, -, *, /, %)
-├── 06_scalar_broadcasting.py               # Scalar broadcasting & vector calculations
-├── 07_universal_functions.py               # Explicit NumPy ufuncs (add, sqrt, etc.)
-├── 08_sum_and_axis.py                      # Axis-wise sum calculations (axis=0, axis=1)
-├── 09_statistical_metrics.py               # Statistical measures (mean, std, min, max)
-├── 10_array_slicing.py                     # 2D grid slicing & sub-matrix extraction
-├── 11_sorting_1d.py                        # Ascending & descending 1D array sorting
-├── 12_index_positioning_argmax_argmin.py   # argsort, argmax, argmin in 1D & 2D arrays
-├── 13_conditional_where.py                 # Conditional searching & value substitution
-├── 14_sorting_2d.py                        # 2D matrix sorting along columns and rows
-├── 15_numpy_matrix_practice_task.py        # Comprehensive 4x4 matrix operations practice task
-├── 16_numpy_rounding_functions.py         # Floating-point rounding (np.round, np.floor, np.ceil)
-├── 17_advanced_2d_sorting_and_reversal.py # Descending 2D row sorting & matrix reversals
-└── README.md                               # Detailed repository documentation
+├── 01_NumPy/                                       # 17 Modular NumPy Practice Scripts
+│   ├── 01_eda_intro.py                            # EDA lifecycle guide & runnable matrix overview
+│   ├── 02_array_types_and_dimensions.py           # 1D, 2D, 3D arrays & attributes (.ndim, .shape, .dtype)
+│   ├── 03_special_matrices.py                     # Zeros, Ones, Full, Identity & Eye matrices
+│   ├── 04_reshape_and_flatten.py                  # arange sequence, reshape & flatten
+│   ├── 05_arithmetic_operators.py                 # Element-wise math operators (+, -, *, /, %)
+│   ├── 06_scalar_broadcasting.py                  # Scalar broadcasting & vector calculations
+│   ├── 07_universal_functions.py                  # Built-in NumPy math ufuncs (add, sqrt, etc.)
+│   ├── 08_sum_and_axis.py                         # Axis-wise sum calculations (axis=0, axis=1)
+│   ├── 09_statistical_metrics.py                  # Statistical measures (mean, std, min, max)
+│   ├── 10_array_slicing.py                        # 2D grid slicing & sub-matrix extraction
+│   ├── 11_sorting_1d.py                           # Ascending & descending 1D sorting
+│   ├── 12_index_positioning_argmax_argmin.py      # argsort, argmax, argmin in 1D & 2D arrays
+│   ├── 13_conditional_where.py                    # Conditional searching & np.where substitution
+│   ├── 14_sorting_2d.py                           # 2D matrix sorting along columns and rows
+│   ├── 15_numpy_matrix_practice_task.py           # Comprehensive 4x4 matrix practice task
+│   ├── 16_numpy_rounding_functions.py            # Floating-point rounding (np.round, np.floor, np.ceil)
+│   └── 17_advanced_2d_sorting_and_reversal.py    # Descending 2D row sorting & matrix reversals
+│
+├── 02_Pandas_Basics/                               # 3 Introductory Pandas Scripts
+│   ├── 01_pandas_intro.py                         # Overview of Pandas DataFrames & Series
+│   ├── 02_series_practice.py                      # Series creation, indexing & operations
+│   └── 03_dataframe_operations.py                 # DataFrame inspection, slicing & filtering
+│
+├── 03_Data_Analysis_Tasks/                         # 5 Self-contained EDA Tasks with Datasets & Notebooks
+│   ├── 01_Employee_Analysis/                      # Employee EDA & Data Visualization Task
+│   │   ├── sample.csv                             # Employee CSV dataset
+│   │   ├── employee_eda_and_visualization.ipynb  # Documented Jupyter Notebook (37 cells)
+│   │   ├── employee_script.py                     # Python execution script
+│   │   └── avg_age_by_location.png                # Saved visualization plot
+│   │
+│   ├── 02_Customer_Filtering_Task/                # Customer Data Filtering & Indexing Task
+│   │   ├── customer5_windows.csv                  # Customer CSV dataset
+│   │   └── customer_data_filtering_task.ipynb     # Documented Jupyter Notebook (82 cells)
+│   │
+│   ├── 03_Department_Employee_Relational/         # Employee & Department Relational Query Task
+│   │   ├── departments.csv                        # Departments dataset
+│   │   ├── employees.csv                          # Employees dataset
+│   │   ├── set_2.pdf                              # Task instructions PDF
+│   │   └── employee_department_relational_task.ipynb # Documented Jupyter Notebook (14 cells)
+│   │
+│   ├── 04_Ecommerce_Orders_Task/                  # E-Commerce Orders Analysis Task
+│   │   ├── customers.csv                          # Customers dataset
+│   │   ├── orders.csv                             # Orders dataset
+│   │   ├── pandas_join_task_questions.pdf         # Task instructions PDF
+│   │   └── ecommerce_orders_analysis_task.ipynb   # Documented Jupyter Notebook (39 cells)
+│   │
+│   └── 05_Relational_Joins_Sample/                # Relational Merges & Table Joins Practice
+│       ├── custom_windows.csv                     # Customers dataset
+│       ├── order_windows.csv                      # Orders dataset
+│       └── pandas_relational_merges_practice.ipynb# Documented Jupyter Notebook (22 cells)
+│
+└── README.md                                       # Master repository documentation
 ```
 
 ---
 
-## 📖 Detailed Module Breakdown
+## 📖 Module Breakdown
 
-### Module 1: EDA Foundations & Array Creation
-- [`01_eda_intro.py`](file:///d:/EDA_PRATICE/01_eda_intro.py): Comprehensive overview of EDA lifecycle (Data Inspection, Cleaning, Univariate, Bivariate, Modeling Prep).
-- [`02_array_types_and_dimensions.py`](file:///d:/EDA_PRATICE/02_array_types_and_dimensions.py): Demonstrates 1D, 2D, 3D arrays, `.ndim`, `.shape`, `.dtype`.
+### 01. NumPy Core Practice
+- Contains 17 standalone, fully annotated Python scripts covering array creation, matrix math, axis-wise aggregations, slicing, sorting, indexing, and rounding routines.
 
-### Module 2: Array Generation & Structural Transformations
-- [`03_special_matrices.py`](file:///d:/EDA_PRATICE/03_special_matrices.py): `zeros`, `ones`, `full`, `identity`, `eye`.
-- [`04_reshape_and_flatten.py`](file:///d:/EDA_PRATICE/04_reshape_and_flatten.py): `arange`, `reshape`, `flatten`.
+### 02. Pandas Basics
+- Contains 3 Python scripts covering Pandas Series and DataFrame creation, indexing, column manipulation, and descriptive statistics.
 
-### Module 3: Arithmetic & Vectorized Operations
-- [`05_arithmetic_operators.py`](file:///d:/EDA_PRATICE/05_arithmetic_operators.py): Element-wise `+`, `-`, `*`, `/`, `%`.
-- [`06_scalar_broadcasting.py`](file:///d:/EDA_PRATICE/06_scalar_broadcasting.py): Scalar multiplication and addition.
-- [`07_universal_functions.py`](file:///d:/EDA_PRATICE/07_universal_functions.py): `np.add`, `np.subtract`, `np.multiply`, `np.divide`, `np.sqrt`.
-
-### Module 4: Aggregations & Statistical Summaries
-- [`08_sum_and_axis.py`](file:///d:/EDA_PRATICE/08_sum_and_axis.py): Sum across axes (`axis=None`, `axis=0`, `axis=1`).
-- [`09_statistical_metrics.py`](file:///d:/EDA_PRATICE/09_statistical_metrics.py): `mean`, `min`, `max`, `std`.
-
-### Module 5: Slicing, Indexing, Searching & Sorting
-- [`10_array_slicing.py`](file:///d:/EDA_PRATICE/10_array_slicing.py): 2D grid slicing & sub-matrix extraction.
-- [`11_sorting_1d.py`](file:///d:/EDA_PRATICE/11_sorting_1d.py): Ascending & descending 1D array sorting.
-- [`12_index_positioning_argmax_argmin.py`](file:///d:/EDA_PRATICE/12_index_positioning_argmax_argmin.py): `argsort`, `argmax`, `argmin` in 1D & 2D.
-- [`13_conditional_where.py`](file:///d:/EDA_PRATICE/13_conditional_where.py): Conditional searching & value substitution (`np.where`).
-- [`14_sorting_2d.py`](file:///d:/EDA_PRATICE/14_sorting_2d.py): 2D matrix sorting along columns and rows.
-
-### Module 6: Comprehensive Practice Tasks & Advanced Operations
-- [`15_numpy_matrix_practice_task.py`](file:///d:/EDA_PRATICE/15_numpy_matrix_practice_task.py): Comprehensive 4x4 matrix operations practice task.
-- [`16_numpy_rounding_functions.py`](file:///d:/EDA_PRATICE/16_numpy_rounding_functions.py): Floating-point rounding routines (`np.round`, `np.floor`, `np.ceil`).
-- [`17_advanced_2d_sorting_and_reversal.py`](file:///d:/EDA_PRATICE/17_advanced_2d_sorting_and_reversal.py): Advanced 2D row-wise descending sorting (`np.sort(arr)[:, ::-1]`) and matrix reversals.
+### 03. Data Analysis Tasks & Projects
+- **Employee Analysis**: Full EDA workflow on `sample.csv` with Matplotlib visual charts (bar charts, horizontal bars, histograms, pie charts).
+- **Customer Filtering Task**: Extensive `loc`/`iloc` indexing, boolean filtering, string matching, and groupby queries on customer records.
+- **Department & Employee Relational**: Relational queries on department and employee datasets.
+- **E-Commerce Orders Task**: Revenue calculation (`Quantity * UnitPrice`), category/city aggregations, and top order rankings.
+- **Relational Joins Sample**: Practice performing `inner`, `left`, `right`, and `outer` joins using `pd.merge()`.
 
 ---
 
-## 🚀 How to Run the Scripts
+## 🚀 How to Run the Code
 
-Execute any script individually from the terminal:
+### Python Scripts
 ```bash
-python 16_numpy_rounding_functions.py
-python 17_advanced_2d_sorting_and_reversal.py
+# Run any NumPy module script
+python 01_NumPy/01_eda_intro.py
+
+# Run any Pandas module script
+python 02_Pandas_Basics/01_pandas_intro.py
+```
+
+### Jupyter Notebooks
+Launch Jupyter Notebook or JupyterLab to interact with documented notebooks in `03_Data_Analysis_Tasks/`:
+```bash
+jupyter notebook
 ```

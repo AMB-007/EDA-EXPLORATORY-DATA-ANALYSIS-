@@ -1,0 +1,7 @@
+department_id,department,manager_name,location,budget
+D01,IT,Rahul Menon,Kochi,5000000
+D02,HR,Anjali Nair,Bangalore,3000000
+D03,Finance,Arun Kumar,Chennai,4000000
+D04,Marketing,Meera Das,Mumbai,3500000
+D05,Sales,Vishnu Raj,Hyderabad,4500000
+D06,Operations,Sneha Thomas,Pune,4200000

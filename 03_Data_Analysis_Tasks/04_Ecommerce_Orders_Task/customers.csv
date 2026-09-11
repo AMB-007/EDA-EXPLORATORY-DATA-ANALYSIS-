@@ -1,0 +1,16 @@
+CustomerID,CustomerName,Age,Gender,Membership,City
+201,Akhil,24,Male,Gold,Kochi
+202,Anjali,27,Female,Silver,Thrissur
+203,Rahul,31,Male,Bronze,Kozhikode
+204,Meera,29,Female,Gold,Kochi
+205,Vishnu,35,Male,Silver,Trivandrum
+206,Sneha,26,Female,Gold,Kollam
+207,Arjun,23,Male,Bronze,Thrissur
+208,Devika,32,Female,Silver,Kozhikode
+209,Nikhil,28,Male,Gold,Kochi
+210,Athira,30,Female,Gold,Kottayam
+211,Sreehari,25,Male,Silver,Kollam
+212,Fathima,34,Female,Bronze,Trivandrum
+213,Joel,29,Male,Gold,Kochi
+214,Gokul,36,Male,Silver,Kottayam
+215,Keerthana,27,Female,Gold,Thrissur

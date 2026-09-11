@@ -1,0 +1,16 @@
+OrderID,CustomerID,Product,Category,Quantity,UnitPrice,City,Status,TotalAmount
+1001,201,Laptop,Electronics,1,65000,Kochi,Completed,65000
+1002,202,Headphones,Electronics,2,2500,Thrissur,Completed,5000
+1003,203,Office Chair,Furniture,1,8500,Kozhikode,Pending,8500
+1004,204,Keyboard,Electronics,3,1800,Kochi,Completed,5400
+1005,205,Desk,Furniture,1,12000,Trivandrum,Cancelled,12000
+1006,206,Monitor,Electronics,2,14500,Kollam,Completed,29000
+1007,207,Mouse,Electronics,4,900,Thrissur,Completed,3600
+1008,208,Bookshelf,Furniture,1,7000,Kozhikode,Pending,7000
+1009,209,Webcam,Electronics,2,3200,Kochi,Completed,6400
+1010,210,Study Table,Furniture,1,9500,Kottayam,Completed,9500
+1011,211,USB Hub,Electronics,3,1100,Kollam,Completed,3300
+1012,212,Table Lamp,Furniture,2,1600,Trivandrum,Pending,3200
+1013,213,Printer,Electronics,1,18500,Kochi,Completed,18500
+1014,214,Sofa,Furniture,1,28000,Kottayam,Cancelled,28000
+1015,215,Microphone,Electronics,2,4500,Thrissur,Completed,9000
