@@ -1,6 +1,6 @@
 # Exploratory Data Analysis (EDA) & Python Data Science Practice Repository
 
-Welcome to the **Exploratory Data Analysis (EDA) & Python Data Science Practice Repository**. This repository contains a structured, modular collection of practice programs, real-world data analysis tasks, and Jupyter Notebooks covering **NumPy**, **Pandas**, and **Matplotlib**.
+Welcome to the **Exploratory Data Analysis (EDA) & Python Data Science Practice Repository**. This repository contains a structured, modular collection of practice programs, real-world data analysis tasks, and Jupyter Notebooks covering **NumPy**, **Pandas**, **Matplotlib**, **Seaborn**, and **Scikit-Learn**.
 
 ---
 
@@ -51,7 +51,7 @@ EDA_PRATICE/
 │   ├── 02_series_practice.py                      # Series creation, indexing & operations
 │   └── 03_dataframe_operations.py                 # DataFrame inspection, slicing & filtering
 │
-├── 03_Data_Analysis_Tasks/                         # 5 Self-contained EDA Tasks with Datasets & Notebooks
+├── 03_Data_Analysis_Tasks/                         # 6 Self-contained EDA Tasks with Datasets & Notebooks
 │   ├── 01_Employee_Analysis/                      # Employee EDA & Data Visualization Task
 │   │   ├── sample.csv                             # Employee CSV dataset
 │   │   ├── employee_eda_and_visualization.ipynb  # Documented Jupyter Notebook (37 cells)
@@ -66,18 +66,22 @@ EDA_PRATICE/
 │   │   ├── departments.csv                        # Departments dataset
 │   │   ├── employees.csv                          # Employees dataset
 │   │   ├── set_2.pdf                              # Task instructions PDF
-│   │   └── employee_department_relational_task.ipynb # Documented Jupyter Notebook (14 cells)
+│   │   └── employee_department_relational_task.ipynb # Documented Jupyter Notebook (85 cells)
 │   │
 │   ├── 04_Ecommerce_Orders_Task/                  # E-Commerce Orders Analysis Task
 │   │   ├── customers.csv                          # Customers dataset
 │   │   ├── orders.csv                             # Orders dataset
 │   │   ├── pandas_join_task_questions.pdf         # Task instructions PDF
-│   │   └── ecommerce_orders_analysis_task.ipynb   # Documented Jupyter Notebook (39 cells)
+│   │   └── ecommerce_orders_analysis_task.ipynb   # Documented Jupyter Notebook (106 cells)
 │   │
-│   └── 05_Relational_Joins_Sample/                # Relational Merges & Table Joins Practice
-│       ├── custom_windows.csv                     # Customers dataset
-│       ├── order_windows.csv                      # Orders dataset
-│       └── pandas_relational_merges_practice.ipynb# Documented Jupyter Notebook (22 cells)
+│   ├── 05_Relational_Joins_Sample/                # Relational Merges & Table Joins Practice
+│   │   ├── custom_windows.csv                     # Customers dataset
+│   │   ├── order_windows.csv                      # Orders dataset
+│   │   └── pandas_relational_merges_practice.ipynb# Documented Jupyter Notebook (22 cells)
+│   │
+│   └── 06_Iris_Classification_EDA/                # Iris Dataset EDA & Train-Test Splitting Task
+│       ├── Iris.csv                               # Iris CSV dataset
+│       └── iris_eda_and_classification.ipynb      # Documented Jupyter Notebook (50 cells)
 │
 └── README.md                                       # Master repository documentation
 ```
@@ -98,6 +102,7 @@ EDA_PRATICE/
 - **Department & Employee Relational**: Relational queries on department and employee datasets.
 - **E-Commerce Orders Task**: Revenue calculation (`Quantity * UnitPrice`), category/city aggregations, and top order rankings.
 - **Relational Joins Sample**: Practice performing `inner`, `left`, `right`, and `outer` joins using `pd.merge()`.
+- **Iris Classification EDA**: Complete Exploratory Data Analysis, feature/target (`X` and `y`) separation, categorical label encoding, distribution plots, heatmaps, and Scikit-Learn `train_test_split` with `StandardScaler`.
 
 ---
 
