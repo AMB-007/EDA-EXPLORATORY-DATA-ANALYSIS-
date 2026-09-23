@@ -1,6 +1,6 @@
-# Exploratory Data Analysis (EDA) & Python Data Science Practice Repository
+# Exploratory Data Analysis (EDA) & Machine Learning Practice Repository
 
-Welcome to the **Exploratory Data Analysis (EDA) & Python Data Science Practice Repository**. This repository contains a structured, modular collection of practice programs, real-world data analysis tasks, and Jupyter Notebooks covering **NumPy**, **Pandas**, **Matplotlib**, **Seaborn**, and **Scikit-Learn**.
+Welcome to the **Exploratory Data Analysis (EDA) & Machine Learning Practice Repository**. This repository contains a structured, modular collection of practice programs, real-world data analysis tasks, Jupyter Notebooks, and Machine Learning algorithms covering **NumPy**, **Pandas**, **Matplotlib**, **Seaborn**, and **Scikit-Learn**.
 
 ---
 
@@ -12,6 +12,7 @@ Welcome to the **Exploratory Data Analysis (EDA) & Python Data Science Practice 
   - [01. NumPy Core Practice](#01-numpy-core-practice)
   - [02. Pandas Basics](#02-pandas-basics)
   - [03. Data Analysis Tasks & Projects](#03-data-analysis-tasks--projects)
+  - [04. Machine Learning Modules](#04-machine-learning-modules)
 - [How to Run the Code](#how-to-run-the-code)
 
 ---
@@ -51,37 +52,30 @@ EDA_PRATICE/
 │   ├── 02_series_practice.py                      # Series creation, indexing & operations
 │   └── 03_dataframe_operations.py                 # DataFrame inspection, slicing & filtering
 │
-├── 03_Data_Analysis_Tasks/                         # 6 Self-contained EDA Tasks with Datasets & Notebooks
+├── 03_Data_Analysis_Tasks/                         # 10 Self-contained Data Analysis Task Folders
 │   ├── 01_Employee_Analysis/                      # Employee EDA & Data Visualization Task
-│   │   ├── sample.csv                             # Employee CSV dataset
-│   │   ├── employee_eda_and_visualization.ipynb  # Documented Jupyter Notebook (37 cells)
-│   │   ├── employee_script.py                     # Python execution script
-│   │   └── avg_age_by_location.png                # Saved visualization plot
-│   │
 │   ├── 02_Customer_Filtering_Task/                # Customer Data Filtering & Indexing Task
-│   │   ├── customer5_windows.csv                  # Customer CSV dataset
-│   │   └── customer_data_filtering_task.ipynb     # Documented Jupyter Notebook (82 cells)
-│   │
 │   ├── 03_Department_Employee_Relational/         # Employee & Department Relational Query Task
-│   │   ├── departments.csv                        # Departments dataset
-│   │   ├── employees.csv                          # Employees dataset
-│   │   ├── set_2.pdf                              # Task instructions PDF
-│   │   └── employee_department_relational_task.ipynb # Documented Jupyter Notebook (85 cells)
-│   │
 │   ├── 04_Ecommerce_Orders_Task/                  # E-Commerce Orders Analysis Task
-│   │   ├── customers.csv                          # Customers dataset
-│   │   ├── orders.csv                             # Orders dataset
-│   │   ├── pandas_join_task_questions.pdf         # Task instructions PDF
-│   │   └── ecommerce_orders_analysis_task.ipynb   # Documented Jupyter Notebook (106 cells)
-│   │
 │   ├── 05_Relational_Joins_Sample/                # Relational Merges & Table Joins Practice
-│   │   ├── custom_windows.csv                     # Customers dataset
-│   │   ├── order_windows.csv                      # Orders dataset
-│   │   └── pandas_relational_merges_practice.ipynb# Documented Jupyter Notebook (22 cells)
+│   ├── 06_Iris_Classification_EDA/                # Iris Dataset EDA & Preprocessing Task
+│   ├── 07_Health_Dataset_EDA/                     # Health & Medical Records EDA Task (Health.csv)
+│   ├── 08_Loan_Prediction_EDA/                    # Loan Eligibility & Financial Risk EDA Task (loan.csv)
+│   ├── 09_Weather_Data_EDA/                       # Weather Conditions Dataset EDA Task (weather.csv)
+│   └── 10_Student_Performance_EDA/                # Student Attendance & Performance EDA Task
+│
+├── 04_Machine_Learning/                            # Machine Learning Theory & Supervised Algorithms
+│   ├── 01_ML_Foundations/                         # ML Concepts, Classifications & KNN Theory
+│   │   └── 01_ml_introduction_and_types.py        # Supervised/Unsupervised, Classification/Regression notes
 │   │
-│   └── 06_Iris_Classification_EDA/                # Iris Dataset EDA & Train-Test Splitting Task
-│       ├── Iris.csv                               # Iris CSV dataset
-│       └── iris_eda_and_classification.ipynb      # Documented Jupyter Notebook (50 cells)
+│   ├── 02_KNN_Classification/                     # K-Nearest Neighbors (KNN) Classification Tasks
+│   │   ├── 01_knn_student_result_prediction.ipynb # KNN on Hours & Attendance (Pass/Fail)
+│   │   └── 02_knn_iris_flower_classification.ipynb# KNN Classification on Iris Flower Dataset
+│   │
+│   └── 03_Naive_Bayes_Classification/             # Naive Bayes Classifier & Probability Theory
+│       ├── 01_probability_theory_intro.py         # Marginal, Joint, & Conditional Probability Theory
+│       ├── 02_naive_bayes_probability_sample.ipynb# Probability calculations on Weather dataset
+│       └── 03_weather_type_naive_bayes_task.ipynb # Naive Bayes Classification on Weather dataset
 │
 └── README.md                                       # Master repository documentation
 ```
@@ -97,12 +91,21 @@ EDA_PRATICE/
 - Contains 3 Python scripts covering Pandas Series and DataFrame creation, indexing, column manipulation, and descriptive statistics.
 
 ### 03. Data Analysis Tasks & Projects
-- **Employee Analysis**: Full EDA workflow on `sample.csv` with Matplotlib visual charts (bar charts, horizontal bars, histograms, pie charts).
-- **Customer Filtering Task**: Extensive `loc`/`iloc` indexing, boolean filtering, string matching, and groupby queries on customer records.
-- **Department & Employee Relational**: Relational queries on department and employee datasets.
-- **E-Commerce Orders Task**: Revenue calculation (`Quantity * UnitPrice`), category/city aggregations, and top order rankings.
-- **Relational Joins Sample**: Practice performing `inner`, `left`, `right`, and `outer` joins using `pd.merge()`.
-- **Iris Classification EDA**: Complete Exploratory Data Analysis, feature/target (`X` and `y`) separation, categorical label encoding, distribution plots, heatmaps, and Scikit-Learn `train_test_split` with `StandardScaler`.
+- **01_Employee_Analysis**: Full EDA workflow on `sample.csv` with Matplotlib visual charts (bar charts, horizontal bars, histograms, pie charts).
+- **02_Customer_Filtering_Task**: Extensive `loc`/`iloc` indexing, boolean filtering, string matching, and groupby queries on customer records.
+- **03_Department_Employee_Relational**: Relational queries on department and employee datasets.
+- **04_Ecommerce_Orders_Task**: Revenue calculation (`Quantity * UnitPrice`), category/city aggregations, and top order rankings.
+- **05_Relational_Joins_Sample**: Practice performing `inner`, `left`, `right`, and `outer` joins using `pd.merge()`.
+- **06_Iris_Classification_EDA**: Exploratory Data Analysis, feature/target (`X` and `y`) separation, categorical label encoding, distribution plots, heatmaps, and Scikit-Learn `train_test_split` with `StandardScaler`.
+- **07_Health_Dataset_EDA**: Exploratory Data Analysis on medical and health records (`Health.csv`).
+- **08_Loan_Prediction_EDA**: Exploratory Data Analysis on financial loan applications (`loan.csv`).
+- **09_Weather_Data_EDA**: Exploratory Data Analysis on meteorological conditions (`weather.csv`).
+- **10_Student_Performance_EDA**: EDA on student study hours, attendance percentage, and exam results.
+
+### 04. Machine Learning Modules
+- **01_ML_Foundations**: Overview of Supervised vs Unsupervised learning, Classification vs Regression, KNN algorithm theory, and Euclidean distance formulas.
+- **02_KNN_Classification**: Practical implementations of K-Nearest Neighbors Classifier (`KNeighborsClassifier`) on student result prediction and Iris flower species classification.
+- **03_Naive_Bayes_Classification**: Probability theory (Marginal, Joint, Conditional probability, Bayes' Theorem) and Gaussian/Multinomial Naive Bayes model training with `pd.get_dummies` and `LabelEncoder`.
 
 ---
 
@@ -113,12 +116,12 @@ EDA_PRATICE/
 # Run any NumPy module script
 python 01_NumPy/01_eda_intro.py
 
-# Run any Pandas module script
-python 02_Pandas_Basics/01_pandas_intro.py
+# Run Machine Learning theory script
+python 04_Machine_Learning/01_ML_Foundations/01_ml_introduction_and_types.py
 ```
 
 ### Jupyter Notebooks
-Launch Jupyter Notebook or JupyterLab to interact with documented notebooks in `03_Data_Analysis_Tasks/`:
+Launch Jupyter Notebook or JupyterLab to interact with documented notebooks in `03_Data_Analysis_Tasks/` and `04_Machine_Learning/`:
 ```bash
 jupyter notebook
 ```
