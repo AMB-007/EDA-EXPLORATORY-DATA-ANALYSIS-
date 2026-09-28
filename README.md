@@ -1,12 +1,21 @@
 # Exploratory Data Analysis (EDA) & Machine Learning Practice Repository
 
-Welcome to the **Exploratory Data Analysis (EDA) & Machine Learning Practice Repository**. This repository contains a structured, modular collection of practice programs, real-world data analysis tasks, Jupyter Notebooks, and Machine Learning algorithms covering **NumPy**, **Pandas**, **Matplotlib**, **Seaborn**, and **Scikit-Learn**.
+Welcome to the **Exploratory Data Analysis (EDA) & Machine Learning Practice Repository**. This repository contains a structured, modular collection of practice programs, real-world data analysis tasks, Jupyter Notebooks, Machine Learning algorithms, and a publication-grade study handbook covering **NumPy**, **Pandas**, **Matplotlib**, **Seaborn**, and **Scikit-Learn**.
+
+---
+
+## 📚 Study Guide & Reference Notes
+
+For in-depth explanations, formal definitions, and syntax examples covering every topic in this repository:
+- **Downloadable PDF Handbook**: [`EDA_and_Machine_Learning_Comprehensive_Notes.pdf`](file:///d:/EDA_PRATICE/EDA_and_Machine_Learning_Comprehensive_Notes.pdf)
+- **Markdown Notes Companion**: [`NOTES.md`](file:///d:/EDA_PRATICE/NOTES.md)
 
 ---
 
 ## 📌 Table of Contents
 
 - [Overview & Objectives](#overview--objectives)
+- [Study Guide & Reference Notes](#-study-guide--reference-notes)
 - [Repository Directory Structure](#repository-directory-structure)
 - [Module Breakdown](#module-breakdown)
   - [01. NumPy Core Practice](#01-numpy-core-practice)
@@ -27,6 +36,12 @@ Exploratory Data Analysis (EDA) is the foundational phase of data science where 
 
 ```
 EDA_PRATICE/
+│
+├── EDA_and_Machine_Learning_Comprehensive_Notes.pdf  # 49-Page Master Reference Handbook (Eye-Comfort Palette)
+├── NOTES.md                                         # Complete Markdown Reference Notes Companion
+├── generated_figures/                               # 7 Publication-Quality 300-DPI Visualizations
+├── scripts/
+│   └── build_comprehensive_pdf.py                  # Standalone ReportLab PDF Generator
 │
 ├── 01_NumPy/                                       # 17 Modular NumPy Practice Scripts
 │   ├── 01_eda_intro.py                            # EDA lifecycle guide & runnable matrix overview
@@ -72,10 +87,23 @@ EDA_PRATICE/
 │   │   ├── 01_knn_student_result_prediction.ipynb # KNN on Hours & Attendance (Pass/Fail)
 │   │   └── 02_knn_iris_flower_classification.ipynb# KNN Classification on Iris Flower Dataset
 │   │
-│   └── 03_Naive_Bayes_Classification/             # Naive Bayes Classifier & Probability Theory
-│       ├── 01_probability_theory_intro.py         # Marginal, Joint, & Conditional Probability Theory
-│       ├── 02_naive_bayes_probability_sample.ipynb# Probability calculations on Weather dataset
-│       └── 03_weather_type_naive_bayes_task.ipynb # Naive Bayes Classification on Weather dataset
+│   ├── 03_Naive_Bayes_Classification/             # Naive Bayes Classifier & Probability Theory
+│   │   ├── 01_probability_theory_intro.py         # Marginal, Joint, & Conditional Probability Theory
+│   │   ├── 02_naive_bayes_probability_sample.ipynb# Probability calculations on Weather dataset
+│   │   └── 03_weather_type_naive_bayes_task.ipynb # Naive Bayes Classification on Weather dataset
+│   │
+│   ├── 04_Diabetes_Classification/                # Pima Indians Diabetes KNN Classification
+│   │   ├── diabetes.csv                           # Medical diagnostic dataset (768 patients)
+│   │   └── diabetes_knn_classification.ipynb      # Hidden zero imputation, scaling, K-tuning & ROC-AUC
+│   │
+│   ├── 05_Employee_Classification_Task/           # 19-Task Employee Turnover ML Project
+│   │   ├── Employee.csv                           # Enterprise HR employee dataset (4,653 records)
+│   │   ├── Employee_ML_Classification_Tasks.pdf   # 19 Official Specification Tasks
+│   │   └── employee_classification_task.ipynb     # Complete 19-task solution: KNN vs Gaussian Naive Bayes
+│   │
+│   └── 06_Student_Performance_Classification/     # Multiclass Student Grade Prediction
+│       ├── Student_performance_data.csv           # 2,392 student academic records
+│       └── student_performance_classification.ipynb# Leakage prevention, scaling & multiclass KNN evaluation
 │
 └── README.md                                       # Master repository documentation
 ```
@@ -106,12 +134,20 @@ EDA_PRATICE/
 - **01_ML_Foundations**: Overview of Supervised vs Unsupervised learning, Classification vs Regression, KNN algorithm theory, and Euclidean distance formulas.
 - **02_KNN_Classification**: Practical implementations of K-Nearest Neighbors Classifier (`KNeighborsClassifier`) on student result prediction and Iris flower species classification.
 - **03_Naive_Bayes_Classification**: Probability theory (Marginal, Joint, Conditional probability, Bayes' Theorem) and Gaussian/Multinomial Naive Bayes model training with `pd.get_dummies` and `LabelEncoder`.
+- **04_Diabetes_Classification**: Diagnostic classification on the Pima Indians Diabetes dataset, addressing hidden zero missing values, feature standardization, optimal $K$ neighbor selection, and clinical recall sensitivity.
+- **05_Employee_Classification_Task**: Rigorous, end-to-end implementation of all 19 tasks from `Employee_ML_Classification_Tasks.pdf`, comparing KNN and Gaussian Naive Bayes on retention (`LeaveOrNot`), with correlation heatmaps, categorical encoding, and comparative evaluation.
+- **06_Student_Performance_Classification**: Multiclass academic tier classification (`GradeClass` 0 to 4) predicting student performance from study time and absences while preventing mathematical target leakage.
 
 ---
 
-## 🚀 How to Run the Code
+## 🚀 How to Run the Code & Regenerate the PDF
 
-### Python Scripts
+### Regenerating the PDF Notes
+```bash
+python scripts/build_comprehensive_pdf.py
+```
+
+### Running Python Scripts
 ```bash
 # Run any NumPy module script
 python 01_NumPy/01_eda_intro.py
