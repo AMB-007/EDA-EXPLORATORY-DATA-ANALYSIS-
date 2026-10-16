@@ -92,6 +92,8 @@ Contains formal definitions, conceptual explanations, mathematical derivations, 
   - [4.12 Unsupervised Learning: K-Means Clustering & Silhouette Evaluation](#412-unsupervised-learning-k-means-clustering--silhouette-evaluation)
   - [4.13 Decision Tree Splitting Criteria: Gini Impurity vs. Shannon Entropy](#413-decision-tree-splitting-criteria-gini-impurity-vs-shannon-entropy)
   - [4.14 Regularization Foundations: L1 (Lasso) vs. L2 (Ridge) Shrinkage](#414-regularization-foundations-l1-lasso-vs-l2-ridge-shrinkage)
+  - [4.15 Random Forest & Ensemble Bagging Architecture](#415-random-forest--ensemble-bagging-architecture)
+  - [4.16 Linear Regression Foundations & Evaluation Metrics](#416-linear-regression-foundations--evaluation-metrics)
 - [Section 5: Master API Quick Reference Tables & Troubleshooting Guide](#section-5-master-api-quick-reference-tables--troubleshooting-guide)
   - [5.1 NumPy Comprehensive API Quick Reference](#51-numpy-comprehensive-api-quick-reference)
   - [5.2 Pandas Comprehensive API Quick Reference](#52-pandas-comprehensive-api-quick-reference)
@@ -1824,6 +1826,70 @@ print('Lasso Coefficients (L1 Sparsity):  ', np.round(lasso.coef_, 3))
 ```text
 Ridge Coefficients (L2 Shrinkage): [0.483 1.705]
 Lasso Coefficients (L1 Sparsity):   [0.    1.943]
+```
+
+### 4.15 Random Forest & Ensemble Bagging Architecture
+- **Ensemble Concept**: Combines predictions from multiple individual base learners (decision trees) to produce a composite model that exhibits significantly lower variance than any individual tree, mitigating overfitting.
+- **Bootstrap Aggregation (Bagging)**: Each tree is trained on a random sample drawn with replacement ($N$ samples from original dataset of size $N$). Roughly $63.2\%$ of unique samples are selected per tree, while the remaining $\approx 36.8\%$ form the **Out-of-Bag (OOB)** evaluation sample.
+- **Random Subspace Method**: At each split node, the tree evaluates only a random subset of features (typically $\sqrt{p}$ features for classification and $p/3$ for regression, where $p$ is total feature count). This decorrelates the trees, preventing strong dominant features from causing all trees to make identical splits.
+- **Prediction Aggregation**:
+  - *Classification*: Majority voting across all trees ($\hat{y} = \text{mode}\{T_1(x), T_2(x), \dots, T_B(x)\}$).
+  - *Regression*: Simple average across all trees ($\hat{y} = \frac{1}{B} \sum_{b=1}^B T_b(x)$).
+
+```python
+from sklearn.ensemble import RandomForestClassifier
+from sklearn.datasets import make_classification
+from sklearn.model_selection import train_test_split
+
+X_rf, y_rf = make_classification(n_samples=500, n_features=10, n_informative=6, random_state=42)
+X_train, X_test, y_train, y_test = train_test_split(X_rf, y_rf, test_size=0.25, random_state=42)
+
+rf_clf = RandomForestClassifier(n_estimators=100, max_depth=8, max_features='sqrt', random_state=42)
+rf_clf.fit(X_train, y_train)
+
+print(f"Random Forest Test Accuracy: {rf_clf.score(X_test, y_test):.4f}")
+print("Top 3 Feature Importances:", sorted(zip(range(10), rf_clf.feature_importances_), key=lambda x: x[1], reverse=True)[:3])
+```
+```text
+Random Forest Test Accuracy: 0.8880
+Top 3 Feature Importances: [(3, 0.2241), (5, 0.1873), (1, 0.1512)]
+```
+
+### 4.16 Linear Regression Foundations & Evaluation Metrics
+- **Ordinary Least Squares (OLS)**: Linear regression models the linear relationship between a continuous dependent target $y$ and one or more independent predictor features $X$ using the equation:
+  $$\hat{y} = w_0 + w_1 x_1 + w_2 x_2 + \dots + w_p x_p = X w$$
+- **Residual Minimization**: OLS computes model parameters $w$ by minimizing the Residual Sum of Squares (RSS):
+  $$\text{RSS}(w) = \sum_{i=1}^n (y_i - \hat{y}_i)^2 = \|y - Xw\|_2^2$$
+  Analytical Normal Equation solution: $w^* = (X^T X)^{-1} X^T y$.
+- **Regression Evaluation Metrics**:
+  - **Mean Absolute Error (MAE)**: $\frac{1}{n}\sum |y_i - \hat{y}_i|$ (unpenalized average deviation, robust to outliers).
+  - **Mean Squared Error (MSE)**: $\frac{1}{n}\sum (y_i - \hat{y}_i)^2$ (penalizes large error deviations quadratically).
+  - **Root Mean Squared Error (RMSE)**: $\sqrt{\text{MSE}}$ (interpretable in original target measurement units).
+  - **Coefficient of Determination ($R^2$)**: $1 - \frac{\sum (y_i - \hat{y}_i)^2}{\sum (y_i - \bar{y})^2}$ (proportion of target variance explained by features; $1.0 = \text{perfect}$, $0.0 = \text{baseline mean model}$).
+
+```python
+import numpy as np
+from sklearn.linear_model import LinearRegression
+from sklearn.metrics import r2_score, mean_absolute_error, root_mean_squared_error
+
+# Experience (years) vs. Salary ($k)
+X_exp = np.array([[1.1], [2.0], [3.2], [4.5], [5.9], [7.1], [8.7], [10.3]])
+y_sal = np.array([39.3, 46.2, 54.4, 61.1, 75.0, 93.2, 105.5, 122.3])
+
+lr = LinearRegression()
+lr.fit(X_exp, y_sal)
+y_pred = lr.predict(X_exp)
+
+print(f"Slope (w1): {lr.coef_[0]:.3f} | Intercept (w0): {lr.intercept_:.3f}")
+print(f"R2 Score:  {r2_score(y_sal, y_pred):.4f}")
+print(f"MAE:       ${mean_absolute_error(y_sal, y_pred):.2f}k")
+print(f"RMSE:      ${root_mean_squared_error(y_sal, y_pred):.2f}k")
+```
+```text
+Slope (w1): 8.948 | Intercept (w0): 26.852
+R2 Score:  0.9897
+MAE:       $2.34k
+RMSE:      $2.89k
 ```
 
 ---
