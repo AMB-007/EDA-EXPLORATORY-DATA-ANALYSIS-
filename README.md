@@ -1,34 +1,32 @@
-# Exploratory Data Analysis (EDA) & Machine Learning Practice Repository
+# Exploratory Data Analysis (EDA) Practice Repository
 
-Welcome to the **Exploratory Data Analysis (EDA) & Machine Learning Practice Repository**. This repository contains a structured, modular collection of practice programs, real-world data analysis tasks, Jupyter Notebooks, Machine Learning algorithms, and a publication-grade study handbook covering **NumPy**, **Pandas**, **Matplotlib**, **Seaborn**, and **Scikit-Learn**.
-
----
-
-## 📚 Study Guide & Reference Notes
-
-For in-depth explanations, formal definitions, and syntax examples covering every topic in this repository:
-- **Downloadable PDF Handbook**: [`EDA_and_Machine_Learning_Comprehensive_Notes.pdf`](file:///d:/EDA_PRATICE/EDA_and_Machine_Learning_Comprehensive_Notes.pdf)
-- **Markdown Notes Companion**: [`NOTES.md`](file:///d:/EDA_PRATICE/NOTES.md)
+A structured, hands-on repository dedicated to **Exploratory Data Analysis (EDA)**, data manipulation, relational database analysis, and visual data exploration using **Python**, **NumPy**, **Pandas**, **Matplotlib**, and **Seaborn**.
 
 ---
 
 ## 📌 Table of Contents
 
-- [Overview & Objectives](#overview--objectives)
-- [Study Guide & Reference Notes](#-study-guide--reference-notes)
-- [Repository Directory Structure](#repository-directory-structure)
-- [Module Breakdown](#module-breakdown)
+- [Overview & Objectives](#-overview--objectives)
+- [Repository Directory Structure](#-repository-directory-structure)
+- [Module Breakdown](#-module-breakdown)
   - [01. NumPy Core Practice](#01-numpy-core-practice)
   - [02. Pandas Basics](#02-pandas-basics)
   - [03. Data Analysis Tasks & Projects](#03-data-analysis-tasks--projects)
-  - [04. Machine Learning Modules](#04-machine-learning-modules)
-- [How to Run the Code](#how-to-run-the-code)
+  - [04. Generated Figures & Visualizations](#04-generated-figures--visualizations)
+- [EDA Workflow & Analytical Techniques](#-eda-workflow--analytical-techniques)
+- [How to Run the Code](#-how-to-run-the-code)
 
 ---
 
 ## 🎯 Overview & Objectives
 
-Exploratory Data Analysis (EDA) is the foundational phase of data science where datasets are cleaned, explored, and summarized to uncover underlying patterns, detect anomalies, test hypotheses, and verify assumptions before applying Machine Learning algorithms.
+**Exploratory Data Analysis (EDA)** is the fundamental analytical process of inspecting, cleaning, transforming, and visualizing datasets to discover underlying patterns, detect anomalies, test hypotheses, and verify assumptions through statistical and graphical representations.
+
+This repository provides practical, reproducible scripts and interactive Jupyter Notebooks covering:
+- **Numerical Computing**: Multidimensional array manipulation, vectorization, and matrix operations with NumPy.
+- **Data Wrangling**: Data cleaning, missing value imputation, type casting, filtering, and indexing with Pandas.
+- **Relational Analytics**: Relational table merges, inner/left/right/outer joins, and cross-table aggregations.
+- **Data Visualization**: Statistical distribution charts, correlation heatmaps, pairwise scatter plots, bar charts, and pie charts using Matplotlib and Seaborn.
 
 ---
 
@@ -37,82 +35,82 @@ Exploratory Data Analysis (EDA) is the foundational phase of data science where 
 ```
 EDA_PRATICE/
 │
-├── EDA_and_Machine_Learning_Comprehensive_Notes.pdf  # 49-Page Master Reference Handbook (Eye-Comfort Palette)
-├── NOTES.md                                         # Complete Markdown Reference Notes Companion
-├── generated_figures/                               # 7 Publication-Quality 300-DPI Visualizations
-├── scripts/
-│   └── build_comprehensive_pdf.py                  # Standalone ReportLab PDF Generator
-│
-├── 01_NumPy/                                       # 17 Modular NumPy Practice Scripts
-│   ├── 01_eda_intro.py                            # EDA lifecycle guide & runnable matrix overview
+├── 01_NumPy/                                       # 17 Modular NumPy Numerical Computing Scripts
+│   ├── 01_eda_intro.py                            # EDA lifecycle & ndarray matrix fundamentals
 │   ├── 02_array_types_and_dimensions.py           # 1D, 2D, 3D arrays & attributes (.ndim, .shape, .dtype)
-│   ├── 03_special_matrices.py                     # Zeros, Ones, Full, Identity & Eye matrices
-│   ├── 04_reshape_and_flatten.py                  # arange sequence, reshape & flatten
-│   ├── 05_arithmetic_operators.py                 # Element-wise math operators (+, -, *, /, %)
-│   ├── 06_scalar_broadcasting.py                  # Scalar broadcasting & vector calculations
-│   ├── 07_universal_functions.py                  # Built-in NumPy math ufuncs (add, sqrt, etc.)
-│   ├── 08_sum_and_axis.py                         # Axis-wise sum calculations (axis=0, axis=1)
-│   ├── 09_statistical_metrics.py                  # Statistical measures (mean, std, min, max)
-│   ├── 10_array_slicing.py                        # 2D grid slicing & sub-matrix extraction
-│   ├── 11_sorting_1d.py                           # Ascending & descending 1D sorting
-│   ├── 12_index_positioning_argmax_argmin.py      # argsort, argmax, argmin in 1D & 2D arrays
-│   ├── 13_conditional_where.py                    # Conditional searching & np.where substitution
-│   ├── 14_sorting_2d.py                           # 2D matrix sorting along columns and rows
-│   ├── 15_numpy_matrix_practice_task.py           # Comprehensive 4x4 matrix practice task
-│   ├── 16_numpy_rounding_functions.py            # Floating-point rounding (np.round, np.floor, np.ceil)
-│   └── 17_advanced_2d_sorting_and_reversal.py    # Descending 2D row sorting & matrix reversals
+│   ├── 03_special_matrices.py                     # Zeros, Ones, Full, Eye, and Identity matrices
+│   ├── 04_reshape_and_flatten.py                  # arange sequence generation, reshape, and flatten
+│   ├── 05_arithmetic_operators.py                 # Vectorized element-wise arithmetic (+, -, *, /, %)
+│   ├── 06_scalar_broadcasting.py                  # Scalar broadcasting rules and dimension alignment
+│   ├── 07_universal_functions.py                  # NumPy ufuncs (add, subtract, sqrt, power, exp)
+│   ├── 08_sum_and_axis.py                         # Axis-wise reductions (axis=0 columns, axis=1 rows)
+│   ├── 09_statistical_metrics.py                  # Statistical metrics (mean, std, min, max, var)
+│   ├── 10_array_slicing.py                        # 2D subgrid slicing and coordinate indexing
+│   ├── 11_sorting_1d.py                           # Ascending and descending 1D vector sorting
+│   ├── 12_index_positioning_argmax_argmin.py      # argsort, argmax, and argmin in 1D and 2D arrays
+│   ├── 13_conditional_where.py                    # Boolean masking and np.where conditional assignment
+│   ├── 14_sorting_2d.py                           # Row-wise and column-wise 2D matrix sorting
+│   ├── 15_numpy_matrix_practice_task.py           # Comprehensive 4x4 matrix diagnostic task
+│   ├── 16_numpy_rounding_functions.py            # Floating-point rounding (np.round, floor, ceil, trunc)
+│   └── 17_advanced_2d_sorting_and_reversal.py    # Descending row sorting and matrix reversals
 │
-├── 02_Pandas_Basics/                               # 3 Introductory Pandas Scripts
-│   ├── 01_pandas_intro.py                         # Overview of Pandas DataFrames & Series
-│   ├── 02_series_practice.py                      # Series creation, indexing & operations
-│   └── 03_dataframe_operations.py                 # DataFrame inspection, slicing & filtering
+├── 02_Pandas_Basics/                               # 3 Foundational Pandas Practice Scripts
+│   ├── 01_pandas_intro.py                         # Introduction to Pandas Series and DataFrames
+│   ├── 02_series_practice.py                      # 1D Series creation, custom indexing, and vector math
+│   └── 03_dataframe_operations.py                 # DataFrame inspection, loc/iloc slicing, and filtering
 │
-├── 03_Data_Analysis_Tasks/                         # 10 Self-contained Data Analysis Task Folders
-│   ├── 01_Employee_Analysis/                      # Employee EDA & Data Visualization Task
-│   ├── 02_Customer_Filtering_Task/                # Customer Data Filtering & Indexing Task
-│   ├── 03_Department_Employee_Relational/         # Employee & Department Relational Query Task
-│   ├── 04_Ecommerce_Orders_Task/                  # E-Commerce Orders Analysis Task
-│   ├── 05_Relational_Joins_Sample/                # Relational Merges & Table Joins Practice
-│   ├── 06_Iris_Classification_EDA/                # Iris Dataset EDA & Preprocessing Task
-│   ├── 07_Health_Dataset_EDA/                     # Health & Medical Records EDA Task (Health.csv)
-│   ├── 08_Loan_Prediction_EDA/                    # Loan Eligibility & Financial Risk EDA Task (loan.csv)
-│   ├── 09_Weather_Data_EDA/                       # Weather Conditions Dataset EDA Task (weather.csv)
-│   └── 10_Student_Performance_EDA/                # Student Attendance & Performance EDA Task
-│
-├── 04_Machine_Learning/                            # Machine Learning Modules (Classification & Regression)
-│   ├── 00_ML_Foundations/                         # ML Taxonomies & Foundational Paradigms
-│   │   └── 01_ml_introduction_and_types.py        # Supervised vs Unsupervised, Classification vs Regression
+├── 03_Data_Analysis_Tasks/                         # 10 Real-World Data Analysis Projects & Tasks
+│   ├── 01_Employee_Analysis/                      # HR Employee EDA & Matplotlib Visualization
+│   │   ├── avg_age_by_location.png                # Rendered location-wise age bar chart
+│   │   ├── employee_eda_and_visualization.ipynb   # Full interactive EDA notebook
+│   │   ├── employee_script.py                     # Standalone Python script
+│   │   └── sample.csv                             # Employee demographic dataset
 │   │
-│   ├── 01_Classification/                         # Supervised Classification Algorithms & Tasks
-│   │   ├── 01_KNN/                                # K-Nearest Neighbors (KNN)
-│   │   │   ├── 01_Student_Result_Prediction/      # 01_knn_student_result_prediction.ipynb
-│   │   │   ├── 02_Iris_Classification/            # 02_knn_iris_flower_classification.ipynb
-│   │   │   ├── 03_Diabetes_Classification/        # diabetes.csv, diabetes_knn_classification.ipynb
-│   │   │   └── 04_Student_Performance_Multiclass/ # Student_performance_data.csv, student_performance_classification.ipynb
-│   │   │
-│   │   ├── 02_Naive_Bayes/                        # Naive Bayes & Probability Theory
-│   │   │   ├── 01_Probability_Theory/             # 01_probability_theory_intro.py, 02_naive_bayes_probability_sample.ipynb
-│   │   │   ├── 02_Weather_Classification/         # 03_weather_type_naive_bayes_task.ipynb
-│   │   │   ├── 03_Heart_Disease_Prediction/       # heart.csv, heart_disease_naive_bayes.ipynb
-│   │   │   └── 04_Loan_Approval_Prediction/       # loan_train.csv, loan_approval_naive_bayes.ipynb
-│   │   │
-│   │   ├── 03_Decision_Trees/                     # Decision Trees & Information Gain
-│   │   │   ├── 01_Theory_and_Concepts/            # 01_decision_tree_intro.py
-│   │   │   ├── 02_Play_Tennis_Task/               # play_tennis_dataset.csv, play_tennis_decision_tree.ipynb
-│   │   │   └── 03_Breast_Cancer_Classification/   # Breast_Cancer.csv, breast_cancer_decision_tree.ipynb
-│   │   │
-│   │   ├── 04_Random_Forest/                      # Ensemble Learning & Random Forest Classifiers
-│   │   │   ├── 01_Car_Evaluation/                 # car_evaluation.csv, car_evaluation_random_forest.ipynb
-│   │   │   ├── 02_Car_Price_Classification/       # cars_data.csv, car_price_random_forest.ipynb
-│   │   │   └── 03_Instagram_Reach_Analysis/       # Instagram.csv, instagram_random_forest.ipynb
-│   │   │
-│   │   └── 05_Hybrid_Classification_Projects/     # Multi-Model Benchmark & Comparative Studies
-│   │       └── 01_Employee_Turnover_KNN_vs_NB/    # Employee.csv, Employee_ML_Classification_Tasks.pdf, employee_classification_task.ipynb
+│   ├── 02_Customer_Filtering_Task/                # Customer Records Querying & Filtering
+│   │   ├── customer5_windows.csv                  # Multi-attribute customer dataset
+│   │   └── customer_data_filtering_task.ipynb     # Complex loc/iloc queries, regex & boolean masking
 │   │
-│   └── 02_Regression/                             # Supervised Regression Algorithms & Continuous Modeling
-│       ├── 01_Linear_Regression_Foundations/      # house_area_linear_regression.ipynb
-│       ├── 02_Salary_Prediction/                  # Salary_Data.csv, salary_linear_regression.ipynb
-│       └── 03_Watermelon_Quality_Prediction/      # melon.csv, watermelon_linear_regression.ipynb
+│   ├── 03_Department_Employee_Relational/         # Multi-Table Relational Analysis
+│   │   ├── departments.csv                        # Department metadata table
+│   │   ├── employees.csv                          # Employee roster table
+│   │   └── employee_department_relational_task.ipynb# Foreign-key joins, salary metrics & department groupings
+│   │
+│   ├── 04_Ecommerce_Orders_Task/                  # E-Commerce Transactional Analysis
+│   │   ├── customers.csv                          # Customer demographic records
+│   │   ├── orders.csv                             # Transactional order records
+│   │   └── ecommerce_orders_analysis_task.ipynb   # Revenue computation, top spenders & category breakdown
+│   │
+│   ├── 05_Relational_Joins_Sample/                # Relational Merges & Joins Practice
+│   │   ├── custom_windows.csv                     # Customer profile records
+│   │   ├── order_windows.csv                      # Transactional order records
+│   │   └── pandas_relational_merges_practice.ipynb# Inner, Left, Right, and Outer joins with pd.merge
+│   │
+│   ├── 06_Iris_Classification_EDA/                # Botanical Dataset Exploratory Analysis
+│   │   ├── Iris.csv                               # Fisher's Iris flower dataset
+│   │   └── iris_eda_and_classification.ipynb      # Pair plots, correlation heatmaps & feature distributions
+│   │
+│   ├── 07_Health_Dataset_EDA/                     # Clinical & Healthcare Data Analysis
+│   │   ├── Health.csv                             # Patient diagnostic & clinical records
+│   │   └── health_records_eda.ipynb               # Outlier auditing, null imputation & statistical summaries
+│   │
+│   ├── 08_Loan_Prediction_EDA/                    # Financial Credit & Loan Assessment
+│   │   ├── loan.csv                               # Applicant financial & credit risk dataset
+│   │   └── loan_eligibility_eda.ipynb             # Income distributions, approval ratios & bivariate charts
+│   │
+│   ├── 09_Weather_Data_EDA/                       # Meteorological Time & Atmosphere Analysis
+│   │   ├── weather.csv                            # Atmospheric observation dataset
+│   │   └── weather_data_eda.ipynb                 # Temperature, humidity, and weather condition trends
+│   │
+│   └── 10_Student_Performance_EDA/                # Academic Attendance & Performance Analysis
+│       └── student_performance_eda.ipynb          # Study hours, attendance correlation & grade distributions
+│
+├── generated_figures/                              # Visual Figures Created During EDA Workflows
+│   ├── eda_bar_chart.png                          # Categorical distribution bar chart
+│   ├── eda_horizontal_bar.png                     # Horizontal ranking bar chart
+│   ├── eda_histogram.png                          # Continuous frequency distribution histogram
+│   ├── eda_pie_chart.png                          # Proportional composition chart
+│   ├── eda_scatterplot.png                        # Pairwise feature scatter plot
+│   └── eda_heatmap.png                            # Multivariate correlation matrix heatmap
 │
 └── README.md                                       # Master repository documentation
 ```
@@ -122,75 +120,89 @@ EDA_PRATICE/
 ## 📖 Module Breakdown
 
 ### 01. NumPy Core Practice
-- Contains 17 standalone, fully annotated Python scripts covering array creation, matrix math, axis-wise aggregations, slicing, sorting, indexing, and rounding routines.
+Contains 17 standalone, fully annotated Python scripts exploring numerical linear algebra and array computations:
+- **Array Architecture**: 1D, 2D, and 3D ndarray creation, memory inspection (`.ndim`, `.shape`, `.size`, `.dtype`).
+- **Matrix Generation**: Special initializers (`zeros`, `ones`, `full`, `eye`, `identity`, `arange`, `linspace`).
+- **Shape Transformations**: Dimension reshaping (`reshape`), flattening (`flatten`), and multi-axis transposition.
+- **Vectorized Mathematics**: Element-wise arithmetic operators and scalar broadcasting across differing dimensions.
+- **Universal Functions (ufuncs)**: Optimized C-level mathematical functions (`add`, `subtract`, `multiply`, `sqrt`, `power`).
+- **Statistical Reductions**: Axis-wise aggregation (`sum`, `mean`, `std`, `var`, `min`, `max`, `argmin`, `argmax`).
+- **Subgrid Slicing & Indexing**: Coordinate-based 2D matrix slicing, boolean masking, and conditional substitution with `np.where`.
+- **Sorting Routines**: In-place and out-of-place 1D sorting, 2D row/column sorting, and descending multi-axis reversals.
 
 ### 02. Pandas Basics
-- Contains 3 Python scripts covering Pandas Series and DataFrame creation, indexing, column manipulation, and descriptive statistics.
+Contains 3 foundational scripts covering tabular data wrangling primitives:
+- **Pandas Series**: 1D labeled array creation from lists and dictionaries, custom index alignment, and vector operations.
+- **DataFrame Primitives**: 2D tabular data structures, column selection, index positioning, and schema introspection (`.info()`, `.describe()`, `.dtypes`).
+- **Data Filtering & Subsetting**: Label-based indexing (`loc`), integer position indexing (`iloc`), and conditional boolean querying.
 
 ### 03. Data Analysis Tasks & Projects
-- **01_Employee_Analysis**: Full EDA workflow on `sample.csv` with Matplotlib visual charts (bar charts, horizontal bars, histograms, pie charts).
-- **02_Customer_Filtering_Task**: Extensive `loc`/`iloc` indexing, boolean filtering, string matching, and groupby queries on customer records.
-- **03_Department_Employee_Relational**: Relational queries on department and employee datasets.
-- **04_Ecommerce_Orders_Task**: Revenue calculation (`Quantity * UnitPrice`), category/city aggregations, and top order rankings.
-- **05_Relational_Joins_Sample**: Practice performing `inner`, `left`, `right`, and `outer` joins using `pd.merge()`.
-- **06_Iris_Classification_EDA**: Exploratory Data Analysis, feature/target (`X` and `y`) separation, categorical label encoding, distribution plots, heatmaps, and Scikit-Learn `train_test_split` with `StandardScaler`.
-- **07_Health_Dataset_EDA**: Exploratory Data Analysis on medical and health records (`Health.csv`).
-- **08_Loan_Prediction_EDA**: Exploratory Data Analysis on financial loan applications (`loan.csv`).
-- **09_Weather_Data_EDA**: Exploratory Data Analysis on meteorological conditions (`weather.csv`).
-- **10_Student_Performance_EDA**: EDA on student study hours, attendance percentage, and exam results.
+Ten self-contained projects featuring real-world datasets and production-style Jupyter Notebooks:
+1. **01_Employee_Analysis**: Complete workforce demographic analysis on `sample.csv`. Covers salary statistics, location-based age aggregation, and Matplotlib figure creation (`avg_age_by_location.png`).
+2. **02_Customer_Filtering_Task**: Intensive querying on `customer5_windows.csv` utilizing chained boolean logic, substring matching, regex pattern searches, and quantile segmentations.
+3. **03_Department_Employee_Relational**: Enterprise relational query tasks merging `employees.csv` and `departments.csv`. Evaluates department salary expenditures, staff counts, and unassigned department audits.
+4. **04_Ecommerce_Orders_Task**: Retail transaction analysis joining `customers.csv` and `orders.csv`. Calculates total basket values (`Quantity * UnitPrice`), customer lifetime values, and category revenue rankings.
+5. **05_Relational_Joins_Sample**: Comprehensive relational join guide on `custom_windows.csv` and `order_windows.csv`. Explores `inner`, `left`, `right`, and `outer` joins using `pd.merge()`, clarifying join cardinality and null generation.
+6. **06_Iris_Classification_EDA**: Fisher's classic botanical dataset analysis. Features sepal and petal dimension distributions, pairwise scatter plots with hue differentiation, and correlation matrix heatmaps.
+7. **07_Health_Dataset_EDA**: Healthcare records analysis on `Health.csv`. Focuses on missing data diagnostics, continuous biomarker distribution spreads, and demographic stratification.
+8. **08_Loan_Prediction_EDA**: Financial credit risk exploration on `loan.csv`. Evaluates applicant income distributions, credit history impacts, co-borrower dependencies, and loan status approval rates.
+9. **09_Weather_Data_EDA**: Meteorological observations analysis on `weather.csv`. Correlates temperature, humidity, wind speed, and precipitation patterns across climatic conditions.
+10. **10_Student_Performance_EDA**: Academic dataset exploration evaluating the statistical correlation between study hours, attendance percentages, and exam passing outcomes.
 
-### 04. Machine Learning Modules
-
-#### 00_ML_Foundations
-- Comprehensive overview of Supervised vs. Unsupervised learning, Classification vs. Regression taxonomies, distance metrics (Euclidean, Manhattan, Minkowski), and standard machine learning lifecycle workflows.
-
-#### 01_Classification
-- **01_KNN (K-Nearest Neighbors)**:
-  - *Student Result Prediction*: Basic 2D feature KNN model predicting pass/fail from study hours and attendance.
-  - *Iris Classification*: Multiclass classification of Iris flower species with 4 continuous features.
-  - *Diabetes Classification*: Pima Indians diagnostic prediction handling hidden zero imputation, robust scaling, $K$-tuning, and ROC-AUC analysis.
-  - *Student Performance Multiclass*: 5-class student academic performance classification (`GradeClass` 0 to 4) addressing data leakage and ordinal class balances.
-- **02_Naive_Bayes**:
-  - *Probability Theory*: Scripted and notebook demonstrations of Marginal, Joint, and Conditional probability and Bayes' Theorem.
-  - *Weather Classification*: Multi-feature categorical Naive Bayes classification with one-hot encoding.
-  - *Heart Disease Prediction*: Clinical diagnosis classifying cardiovascular risk using Gaussian Naive Bayes with feature scaling.
-  - *Loan Approval Prediction*: Creditworthiness and financial risk classification with categorical encoding and missing value imputation.
-- **03_Decision_Trees**:
-  - *Theory & Concepts*: Python script covering root node selection, Shannon Entropy, Information Gain, Gini Impurity, and tree pruning mechanics.
-  - *Play Tennis Task*: Classic decision tree classification mapping weather outlook, humidity, and wind conditions to binary game play.
-  - *Breast Cancer Classification*: Diagnostic classification on medical tumor features with tree visualization and recall optimization.
-- **04_Random_Forest**:
-  - *Car Evaluation*: Multi-attribute vehicle acceptability classification using Random Forest ensemble bagging and ordinal encoding.
-  - *Car Price Classification*: Large-scale vehicle dataset (97,000+ records) discretized into market segments (Budget, Mid-Range, Luxury) achieving 90%+ classification accuracy.
-  - *Instagram Reach Analysis*: Fake account detection and engagement reach classification comparing Random Forest, KNN, Naive Bayes, and Decision Trees.
-- **05_Hybrid_Classification_Projects**:
-  - *Employee Turnover (KNN vs. NB)*: Rigorous, 19-task implementation comparing KNN and Gaussian Naive Bayes retention models on enterprise HR data.
-
-#### 02_Regression
-- **01_Linear_Regression_Foundations**: Simple Ordinary Least Squares (OLS) regression modeling house area vs. sale price ($y = mx + c$) with trendline plotting and unseen area forecasting.
-- **02_Salary_Prediction**: Univariate linear regression predicting compensation from years of experience with `MinMaxScaler`, $R^2$, MAE, RMSE metrics, and regression scatter plots.
-- **03_Watermelon_Quality_Prediction**: Fruit price estimation based on watermelon weight ($kg$), evaluating correlation heatmaps, model coefficients, and prediction error bounds.
+### 04. Generated Figures & Visualizations
+High-resolution charts exported during exploratory workflows illustrating best practices in visual data storytelling:
+- **Bar Charts (`eda_bar_chart.png` & `eda_horizontal_bar.png`)**: Comparing discrete categorical quantities and ranked metrics.
+- **Histogram (`eda_histogram.png`)**: Evaluating distribution skewness, central tendency, and spread.
+- **Pie Chart (`eda_pie_chart.png`)**: Representing compositional shares and proportions.
+- **Scatter Plot (`eda_scatterplot.png`)**: Displaying pairwise feature relationships and category clustering.
+- **Correlation Heatmap (`eda_heatmap.png`)**: Revealing multi-feature linear associations via color-coded correlation coefficients.
 
 ---
 
-## 🚀 How to Run the Code & Regenerate the PDF
+## 🔍 EDA Workflow & Analytical Techniques
 
-### Regenerating the PDF Notes
-```bash
-python scripts/build_comprehensive_pdf.py
+Every exploratory analysis in this repository follows a disciplined 5-stage lifecycle:
+
+```
+┌─────────────────┐     ┌─────────────────┐     ┌─────────────────┐     ┌─────────────────┐     ┌─────────────────┐
+│  1. Inspection  │ ──> │   2. Cleaning   │ ──> │ 3. Transformation│ ──> │4. Visualization │ ──> │   5. Insights   │
+│                 │     │                 │     │                 │     │                 │     │                 │
+│ .head(), .shape │     │ .isna().sum()   │     │ Type casting    │     │ Histograms      │     │ Summary tables  │
+│ .info(), dtypes │     │ Imputation      │     │ Feature creation│     │ Heatmaps        │     │ Business KPIs   │
+│ .describe()     │     │ Deduplication   │     │ GroupBy / Aggs  │     │ Scatter plots   │     │ Actionable tips │
+└─────────────────┘     └─────────────────┘     └─────────────────┘     └─────────────────┘     └─────────────────┘
 ```
 
-### Running Python Scripts
+1. **Structural Auditing**: Assessing dataframe dimensions (`.shape`), column names, and storage data types (`.dtypes`).
+2. **Data Hygiene & Cleansing**: Detecting null values (`.isna().sum()`), handling duplicate rows (`.drop_duplicates()`), and treating anomalous outliers.
+3. **Data Transformation & Aggregation**: Mutating new analytical fields, filtering target cohorts, and executing split-apply-combine aggregations (`.groupby()`).
+4. **Visual Exploration**: Mapping distributions, pairwise correlations, and categorical breakdowns through graphical plots.
+5. **Synthesis & KPI Reporting**: Formulating business insights and analytical findings.
+
+---
+
+## 🚀 How to Run the Code
+
+### Prerequisites
+Ensure Python 3.9+ is installed along with the core data science libraries:
 ```bash
-# Run any NumPy module script
+pip install numpy pandas matplotlib seaborn jupyter
+```
+
+### Running NumPy & Pandas Scripts
+Execute any script directly from the root repository:
+```bash
+# Run a NumPy script
 python 01_NumPy/01_eda_intro.py
+python 01_NumPy/08_sum_and_axis.py
 
-# Run Machine Learning theory script
-python 04_Machine_Learning/01_ML_Foundations/01_ml_introduction_and_types.py
+# Run a Pandas script
+python 02_Pandas_Basics/01_pandas_intro.py
 ```
 
-### Jupyter Notebooks
-Launch Jupyter Notebook or JupyterLab to interact with documented notebooks in `03_Data_Analysis_Tasks/` and `04_Machine_Learning/`:
+### Launching Jupyter Notebooks
+To interact with any of the analysis notebooks in `03_Data_Analysis_Tasks/`:
 ```bash
 jupyter notebook
 ```
+Navigate to any project folder (e.g., `03_Data_Analysis_Tasks/01_Employee_Analysis/`) and open the respective `.ipynb` file.
